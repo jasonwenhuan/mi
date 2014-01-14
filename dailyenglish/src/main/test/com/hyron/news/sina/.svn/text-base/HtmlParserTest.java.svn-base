@@ -1,8 +1,0 @@
-package com.hyron.news.sina;
-
-public class HtmlParserTest {
-	public static void main(String[] args) {// test
-		NewsRetriever nr = new NewsRetriever();
-		nr.getNews();
-	}
-}
