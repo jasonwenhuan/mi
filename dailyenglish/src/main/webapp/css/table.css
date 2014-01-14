@@ -1,0 +1,29 @@
+@CHARSET "ISO-8859-1";
+.mytable { 
+    border: solid 0px #D5D5D5;
+    padding:0;
+}
+.myhth {
+    background: none repeat scroll 0 0 #E2F0FF;
+    border-bottom: 0px solid #9CC2E9;
+    color: #135B96;
+    font-family: "Arial";
+    font-size: 14px;
+    height: 30px;
+    line-height: 18px;
+    padding: 0 0 0 7px;
+    text-align: center;
+}
+.myhth a {
+    font-weight:normal;
+}
+
+#tabletest {
+    overflow-x:auto;
+    overflow-y:hidden;
+    width:395px;
+}
+.myttd {
+    border: 0px solid #9CC2E9;
+     font-size: 14px;
+}

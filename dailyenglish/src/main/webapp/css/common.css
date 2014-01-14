@@ -1,0 +1,30 @@
+@CHARSET "ISO-8859-1";
+
+/********** web font define **********/
+@font-face {
+    font-family: "hibu_co_headlinebold";
+    font-style: normal;
+    font-weight: normal;
+    src: url("fonts/hibucoheadline_bd-eot.eot#iefix");
+    src: url("fonts/hibucoheadline_bd-woff.woff") format("woff")
+    , url("fonts/hibucoheadline_bd-ttf.ttf") format("truetype")
+    , url("fonts/hibucoheadline_bd-svg.svg#hibu_co_headlinebold") format("svg");
+}
+@font-face {
+    font-family: "hibu_co_text_lightregular";
+    font-style: normal;
+    font-weight: normal;
+    src: url("fonts/hibucotext_lt-eot.eot?#iefix");
+    src: url("fonts/hibucotext_lt-woff.woff") format("woff")
+    , url("fonts/hibucotext_lt-ttf.ttf") format("truetype")
+    , url("fonts/hibucotext_lt-svg.svg#hibu_co_text_lightregular") format("svg");
+}
+@font-face {
+    font-family: "hibu_co_textregular";
+    font-style: normal;
+    font-weight: normal;
+    src: url("fonts/hibucotext_rg-eot.eot?#iefix");
+    src: url("fonts/hibucotext_rg-woff.woff") format("woff")
+    , url("fonts/hibucotext_rg-ttf.ttf") format("truetype")
+    , url("fonts/hibucotext_rg-svg.svg#hibu_co_textregular") format("svg");
+}

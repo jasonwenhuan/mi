@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>登录</title>
+<script type="text/javascript"
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
+	<script type='text/javascript' src='../js/de-js/login.js'></script>
+<script type='text/javascript' src='../dwr/interface/jUserLoginIn.js'></script>
+<script type='text/javascript' src='../dwr/interface/jUserRegister.js'></script>
+<script type='text/javascript' src='../dwr/engine.js'></script>
+<script type='text/javascript' src='../dwr/util.js'></script>
+<script type='text/javascript' src='./dailyEnglishPage.html'></script>
+<script type='text/javascript' src='../js/de-js/common.js'></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		var oldVal;
+		$("#login").click(function() {
+			login();
+		});
+		$("#user").each(function() {
+			   oldVal=$(this).val();   
+			   $(this)   
+			   .css({"color":"#888"})     
+			   .focus(function(){   
+			    	if($(this).val()!=oldVal){
+			    		$(this).css({"color":"#000"})
+			    	}else{
+			    		$(this).val("").css({"color":"#888"})
+			    	}   
+			   })   
+			   .blur(function(){   
+			    	if($(this).val()==""){
+			    		$(this).val(oldVal).css({"color":"#888"})
+			    	}   
+			   })   
+			   .keydown(function(){
+				   $(this).css({"color":"#000"})
+			   })   
+		});
+		$("#reset").click(function() {
+			$("#user").attr("value", oldVal);
+			$("#user").css({"color":"#888"});  
+			$("#password").attr("value", "");
+		});
+	});
+</script>
+</head>
+<body>
+	<div style="text-align: center; margin-top: 15em;">
+		<div>
+			<div style="margin-bottom: 1em">
+				<span>账 户 </span><span><input id="user" type="text" value="请输入用户名或邮箱地址"/> </span>
+			</div>
+			
+			<div> 
+				<span>密 码 </span><span style="margin-left: 0.5em"><input
+					type="password" id="password" /> </span>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div style="margin-top: 1em">
+			<span><input type="button" id="login" value="登录"></input>
+			</span> <span style="margin-left: 5.5em"><input type="button"
+				id="reset" value="重置" /> </span>
+		</div>
+		<h3 style="color:#ff0000">
+			还没账号 赶快去 <a href="register.html" style="text-decoration:none">注册</a>吧
+		</h3>
+	</div>
+</body>
+</html>

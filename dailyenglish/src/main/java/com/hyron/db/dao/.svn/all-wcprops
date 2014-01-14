@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/dailyenglish/!svn/ver/74/trunk/dailyenglish/src/main/java/com/hyron/db/dao
+END
+NewsHibernateDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/dailyenglish/!svn/ver/64/trunk/dailyenglish/src/main/java/com/hyron/db/dao/NewsHibernateDao.java
+END
+UserHibernateDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/dailyenglish/!svn/ver/67/trunk/dailyenglish/src/main/java/com/hyron/db/dao/UserHibernateDao.java
+END
+PostHibernateDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/dailyenglish/!svn/ver/74/trunk/dailyenglish/src/main/java/com/hyron/db/dao/PostHibernateDao.java
+END

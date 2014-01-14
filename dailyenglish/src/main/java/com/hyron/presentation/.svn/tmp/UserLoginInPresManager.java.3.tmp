@@ -1,0 +1,74 @@
+package com.hyron.presentation;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.http.HttpSession;
+
+import org.directwebremoting.WebContextFactory;
+
+import com.hyron.common.Role;
+import com.hyron.db.domain.User;
+import com.hyron.exception.BusinessException;
+import com.hyron.facade.UserLoginInFacade;
+import com.hyron.javabean.UserBean;
+import com.hyron.utils.BeanBuild;
+
+public class UserLoginInPresManager {
+	public static final String USER_SESSION_NAME = "username";
+	public static final String USER_SESSION_ROLE = "role";
+	public UserLoginInFacade userLoginInFacade;
+
+	public UserLoginInFacade getUserLoginInFacade() {
+		return userLoginInFacade;
+	}
+
+	public void setUserLoginInFacade(UserLoginInFacade userLoginInFacade) {
+		this.userLoginInFacade = userLoginInFacade;
+	}
+
+	@SuppressWarnings("unchecked")
+	public List<UserBean> userLoginIn(String userNameorEmail, String passWord) throws BusinessException{
+		List<UserBean> userBeans = new ArrayList<UserBean>();
+		try {
+			List<User> users = userLoginInFacade.userLoginIn(userNameorEmail,
+					passWord);
+			if(null == users){
+				throw new BusinessException("user does not exit or password is wrong");
+			}
+			userBeans = BeanBuild.buildUserBean(users);
+			if (null != userBeans) {
+				 HttpSession session = WebContextFactory.get().getSession();
+				 session.setAttribute(USER_SESSION_NAME, userBeans.get(0).getNickName());
+				 session.setAttribute(USER_SESSION_ROLE, Role.getName(userBeans.get(0).getRole()));
+			}
+			return userBeans;
+		} catch (BusinessException be) {
+			return  null;
+			
+		}
+		//return userBeans;
+	}
+	
+	
+	public String getLoginUserSessionName(){
+		HttpSession session = WebContextFactory.get().getSession();
+		String userName = (String) session.getAttribute(USER_SESSION_NAME);
+		return userName;
+	}
+
+	public int getLoginUserSessionRole(){
+		HttpSession session = WebContextFactory.get().getSession();
+		String userRole = (String) session.getAttribute(USER_SESSION_ROLE);
+		return Role.getRoleId(userRole);
+	}
+	
+	public boolean userLogout(String userName){
+		HttpSession session = WebContextFactory.get().getSession();
+  		String username = (String) session.getAttribute(USER_SESSION_NAME);
+		if(username != null){
+			session.setAttribute(USER_SESSION_NAME, null);
+		}
+		return true;
+	}
+}

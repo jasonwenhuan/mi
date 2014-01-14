@@ -1,0 +1,61 @@
+function getCurrentTime(){
+	var time;
+	jUserLoginIn.getCurrentTime(function(data){
+		if(data != null){
+			time = data;
+		}else{
+			return null;
+		}
+	});
+	return time;
+}
+
+function formatData(data,number){
+	var title = "<td id='title"+number+"'><a href='javascript:showPost(\""+data.title+"\");'>" + data.title + "</a></td>";
+	var author = "<td id='author"+number+"'>" + data.author + "</td>"
+	var time = "<td id='date"+number+"'>" + formatPostDate(data.createDate) + "</td>";
+	return title + author + time;
+}
+
+function showPost(title){
+	JqueryDialog.Open('帖子信息', 'test.html', 300, 300, title);
+}
+
+function initialDialog(){
+	j
+	$("#posttitle").val("JasonTest");
+}
+        
+function display(){  
+	highlightLeftNav("homePage");
+	var time = getCurrentTime();
+	$("#time").html(time);
+	
+	var post = "Jason发了新帖子";
+	$("#postaction").html(post);
+	
+	makeTable();
+	$('table#demo').bestTable();
+}
+
+function makeTable(){
+	
+	var tStr = "";
+	tStr += "<tr><td id='htitle' title='click to sort'>帖子标题</td>" +
+			"<td id='hauthor' title='click to sort'>作者</td>" +
+			"<td id='htime' title='click to sort'>发布时间</td></tr>";
+	//tStr += "<tbody>";
+	DWREngine.setAsync(false);  
+	jPost.getAllPost(pageState,function(data){
+		if(data != null){
+			for(var i=0;i<data.length;i++){
+				tStr += "<tr>";
+				tStr += formatData(data[i],i);
+				tStr += "</tr>";
+			}
+		}
+	});  
+	DWREngine.setAsync(true);
+	//tStr += "</tbody>";
+	$("#demo").html(tStr);
+}

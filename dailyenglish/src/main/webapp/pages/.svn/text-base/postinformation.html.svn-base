@@ -1,0 +1,24 @@
+<div id="postinformation">
+    <div id="form">
+        <div id="name">
+                                帖子名
+            <input id="posttitle"></input>
+        </div>
+        <div id="content">
+            <div>内容<div>
+            <textarea id="postcontent" rows="5" cols="25" name="内容"></textarea>
+        </div>
+        <div id="create">
+                               创建日期
+            <input id="createDate"></input>
+        </div>
+        <div id="change">
+                               修改日期
+            <input id="changeDate"></input>
+        </div>
+         <div id="author">
+                               作者
+            <input id="postauthor"></input>
+        </div>
+    </div>
+</div>

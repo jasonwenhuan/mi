@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title> New Document </title>
+  <link rel="stylesheet" type="text/css" href="../../css/paginator.css">
+  <link rel="stylesheet" type="text/css" href="../../css/dialog.css">
+  <script type="text/javascript"
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
+  <script type="text/javascript" src="../../js/prototype/proto.js"></script>
+  <script type="text/javascript" src="../../js/travel/paginator.js"></script>
+  <script type="text/javascript" src="../../js/travel/myPaginator.js"></script>
+  <script type="text/javascript" src="../../js/travel/dialog.js"></script>
+ </head>
+
+ <body>
+     <div id="paging"></div>
+	<!--  <iframe src="./myDialog.html" frameborder="no"></iframe> -->
+	<div><a href="#" onclick="openDialog()">打开对话框</a></div>
+	 <script type="text/javascript">
+         //display();
+		 //initDialog();
+		 function initDialog(){
+		     $("#positionName").val("韩国");
+			 $("#positionCreator").val("wenhuan");
+			 $("#createDate").val("2013/1/1");
+			 $("#modifiDate").val("2013/7/23");
+			 $("#positionDetail").val("该团已经被预定，仍有10人等待预定");
+		 }
+		 function openDialog(){
+			 var dialog = new Dialog.open(500,400,"myDialog.html","test");
+			 initDialog();
+		 }
+     </script>
+ </body>
+</html>

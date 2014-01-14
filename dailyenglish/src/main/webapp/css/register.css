@@ -1,0 +1,10 @@
+body,form{
+	margin: 0;
+	font-family : "Microsoft YaHei","微软雅黑","SimSun","宋体";
+	background: url(../images/registerbackground.jpg);
+}
+.register {
+    text-align: center; 
+    float: left;
+    margin: 15em 15em;
+}

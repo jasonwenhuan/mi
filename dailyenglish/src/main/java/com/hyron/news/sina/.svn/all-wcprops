@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/dailyenglish/!svn/ver/94/trunk/dailyenglish/src/main/java/com/hyron/news/sina
+END
+HtmlParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/dailyenglish/!svn/ver/90/trunk/dailyenglish/src/main/java/com/hyron/news/sina/HtmlParser.java
+END
+NewsListData.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/dailyenglish/!svn/ver/89/trunk/dailyenglish/src/main/java/com/hyron/news/sina/NewsListData.java
+END
+NewsRetriever.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/dailyenglish/!svn/ver/94/trunk/dailyenglish/src/main/java/com/hyron/news/sina/NewsRetriever.java
+END
+UnreachablePageException.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/dailyenglish/!svn/ver/89/trunk/dailyenglish/src/main/java/com/hyron/news/sina/UnreachablePageException.java
+END
+NewsRetrievers.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/dailyenglish/!svn/ver/89/trunk/dailyenglish/src/main/java/com/hyron/news/sina/NewsRetrievers.java
+END
+INewsRetriever.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/dailyenglish/!svn/ver/89/trunk/dailyenglish/src/main/java/com/hyron/news/sina/INewsRetriever.java
+END

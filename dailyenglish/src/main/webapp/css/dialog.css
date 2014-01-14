@@ -1,0 +1,46 @@
+#dialogShadow{ 
+    z-index:999;
+	position:absolute;
+	background-color:#000000;
+	filter:alpha(opacity=25);
+	-moz-opacity:0.25;
+	opacity:0.25;
+}
+
+#dialog{
+    border: solid 1px #D5D5D5;
+	background-color:#FFFFFF;
+	z-index: 1000;
+}
+
+#d_header{
+    border: solid 1px #D5D5D5;
+	background-color:#FF7F50;
+}
+
+#header_title{
+	float:left;
+}
+
+#form{
+	padding:5px 10px;
+	width:80%;
+}
+
+.formInput{
+	margin : 10px 5px;
+}
+
+.positionButton{
+    float:right;
+}
+
+#positionDetail{
+   width: 370px;
+   height: 220px;
+}
+
+.appointButton{
+    float:right;
+    margin-button:5px;
+}

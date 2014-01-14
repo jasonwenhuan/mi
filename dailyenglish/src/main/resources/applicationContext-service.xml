@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+    <bean id="userRegisterFacede" class="com.hyron.facade.UserRegisterFacade">
+        <property name="userDao" ref="userHibernateDao"/>
+    </bean>
+     
+    <bean id="userLoginInFacade" class="com.hyron.facade.UserLoginInFacade">
+        <property name="userDao" ref="userHibernateDao"/>
+    </bean>
+    
+    <bean id="newsFacade" class="com.hyron.facade.NewsFacade">
+    	<property name="newsDao" ref="newsHibernateDao"/>
+    </bean>
+    
+    <bean id="postFacade" class="com.hyron.facade.PostFacade">
+        <property name="postHibernateDao" ref="postHibernateDao"/>
+    </bean>
+    
+    <bean id="userFacade" class="com.hyron.facade.UserFacade">
+        <property name="userHibernateDao" ref="userHibernateDao"/>
+    </bean>
+    <bean id="tourgroupFacade" class="com.hyron.facade.TourgroupFacade">
+        <property name="tourgroupHibernateDao" ref="tourgroupHibernateDao"/>
+    </bean>
+    <bean id="clientFacade" class="com.hyron.facade.ClientFacade">
+        <property name="clientHibernateDao" ref="clientHibernateDao"/>
+    </bean>
+    <bean id="appointFacade" class="com.hyron.facade.AppointFacade">
+        <property name="appointHibernateDao" ref="appointHibernateDao"/>
+    </bean>
+</beans>

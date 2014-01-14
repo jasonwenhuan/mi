@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/dailyenglish/!svn/ver/13/trunk/dailyenglish/src/main/test/com/hyron/api/service
+END
+ApiTestBase.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/dailyenglish/!svn/ver/13/trunk/dailyenglish/src/main/test/com/hyron/api/service/ApiTestBase.java
+END
+TestLoginService.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/dailyenglish/!svn/ver/13/trunk/dailyenglish/src/main/test/com/hyron/api/service/TestLoginService.java
+END

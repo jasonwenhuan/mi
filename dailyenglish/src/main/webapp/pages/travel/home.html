@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Travel Home Page</title>
+<link rel="stylesheet" type="text/css" href="../../css/common.css">
+<link rel="stylesheet" type="text/css" href="../../css/home.css">
+<link rel="stylesheet" type="text/css" href="../../css/dialog.css">
+<link rel="stylesheet" type="text/css" href="../../css/table.css">
+<link rel="stylesheet" type="text/css" href="../../css/paginator.css">
+
+<script type='text/javascript' src='../../dwr/util.js'></script>
+<script type='text/javascript' src='../../dwr/engine.js'></script>
+<script type='text/javascript' src='../../dwr/interface/jAppoint.js'></script>
+<script type='text/javascript' src='../../dwr/interface/jTourgroup.js'></script>
+<script type='text/javascript' src='../../dwr/interface/jClient.js'></script>
+<script type='text/javascript' src='../../dwr/interface/jClient.js'></script>
+<script type='text/javascript' src='../../dwr/interface/jUserLoginIn.js'></script>
+
+<script type="text/javascript" src="../../js/travel/jquery-1.9.1.js"></script>
+<!-- <script type="text/javascript">
+jq = jQuery.noConflict();
+</script> -->
+<script type="text/javascript" src="../../js/prototype/proto.js"></script>
+<script type="text/javascript" src="../../js/prototype/datatable.js"></script>
+<script type="text/javascript" src="../../js/travel/dialog.js"></script>
+<script type="text/javascript" src="../../js/travel/paginator.js"></script>
+
+<script type="text/javascript" src="../../js/travel/tablePres.js"></script>
+<script type="text/javascript" src="../../js/travel/home.js"></script>
+</head>
+<body>
+  <div class="navBack" id="menu">
+		<ul id="nav">
+		    <li class="mainlevel"><a id="appoint"  onclick="changeTableObj(this);return false;"href="#">预约</a>
+		        <ul id="subMenu" class="subMenu1">
+				<li>
+				<a onclick="addAppoint();return false;" href="#">添加预约</a>
+				</li>
+				
+				<li>
+				<a  onclick="changeAppoint();return false;" href="#">修改预约</a>
+				</li>
+				
+				<li>
+				<a  onclick="deleteAppoint();return false;" href="#">删除预约</a>
+				</li>
+				</ul>
+		    </li>
+			<li class="mainlevel"><a id="tourgroup" onclick="changeTableObj(this);return false;"href="#">旅游团</a><span></span>
+			    <ul id="subMenu" class="subMenu2">
+				<li>
+				<a onclick="addTourgroup();return false;" href="#">添加旅游团</a>
+				</li>
+				
+				<li>
+				<a  onclick="updateTourgroup();return false;" href="#">修改旅游团</a>
+				</li>
+				
+				<li>
+				<a  onclick="deleteTourgroup();return false;" href="#">删除旅游团</a>
+				</li>
+				</ul>
+			</li>
+			<li class="mainlevel"><a id="client"  onclick="changeTableObj(this);return false;"href="#">客户</a>
+				<ul id="subMenu" class="subMenu3">
+				<li>
+				<a onclick="addClient();return false;" href="#">添加客户</a>
+				</li>
+				
+				<li>
+				<a  onclick="changeClient();return false;" href="#">修改客户</a>
+				</li>
+				
+				<li>
+				<a  onclick="deleteClient();return false;" href="#">删除客户</a>
+				</li>
+				</ul>
+			</li>
+			
+			<li class="searchlevel">
+			    <div class="welcome"><span id="userNameAndRole"></span></div>
+			</li>
+			
+		</ul>
+		<div style="clear:both"></div>
+		
+		
+	</div>
+	<div class="filterField">
+	    <div class="columnOne">
+	        <div id="fName" class="filterName"><b>名称</b><input id="filterName"></input></div>
+            <div id="fTourgroup" class="filterName"><b>旅游团</b><input id="filterTourgroup"></input></div>
+	        <div id="fClient" class="filterName"><b>客户</b><input id="filterClient"></input></div>
+	        <div id="fCreator" class="filterName"><b>创建者</b><input id="filterCreator"></input></div>
+	    </div>
+	    <div class="searchButton">
+	        <a id="search" class="loginBtn buttonStyle" title="click to reset" onclick="resetFilter();return false;" href="#">Reset</a>
+	        <a id="search" class="loginBtn buttonStyle" title="click to search" onclick="searchTable();return false;" href="#"><span class="aword">Search</span></a>
+	    </div>
+	    
+	</div>
+	<div class="showTable">
+	    <div id="mytable"></div>	    
+	</div>
+	<div id="paging"></div>
+	<div class="copyright"><p>Copyright ©2013- Personal Development, All Rights Reserved</p>
+	    <p>隐私保护　个人开发　版权所有  联系人：闻欢 QQ:504643645 Skype:jasonwenhuan 电话：15605178083  <a href="help.html">帮助</a></p>
+	</div>
+</body>
+</html>
