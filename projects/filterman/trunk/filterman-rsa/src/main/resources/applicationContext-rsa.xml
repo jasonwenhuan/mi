@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+	<context:annotation-config />
+
+    <context:property-placeholder location="classpath:filterman-rsa.properties" ignore-unresolvable="true"/>
+    
+    <bean id="requestDecrypt" class="com.chinaunicom.filterman.rsa.decrypt.RequestDecrypt">
+        <property name="publicKeyPath" value="${rsa.publickeyfile}" />
+        <property name="privateKeyPath" value="${rsa.privatekeyfile}" />
+    </bean>
+    
+    <bean id="path" class="com.chinaunicom.filterman.rsa.bean.Path">
+       <property name="rootPath">
+           <value>${rsa.rootpath}</value>
+       </property>
+        <property name="publicKeyPath">
+            <value>${rsa.publickeyfile}</value>
+        </property>
+        <property name="privateKeyPath">
+            <value>${rsa.privatekeyfile}</value>
+        </property>
+        <property name="messagePath">
+            <value>${rsa.messagefile}</value>
+        </property>
+    </bean>
+
+    <bean id="keyGenerate" class="com.chinaunicom.filterman.rsa.KeyGenerate">
+        <property name="path" ref="path"/>
+    </bean>
+</beans>

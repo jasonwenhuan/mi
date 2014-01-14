@@ -1,0 +1,53 @@
+.bodyStyle {
+    background-color: #418FDE;
+    margin: 0;
+}
+
+.displayResultContentDiv{
+    font-family: \5B8B\4F53;
+    text-align: center;
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 500px;
+    margin-top: 5%;
+}
+
+.displayResultContentDiv .displayResultTable{
+    margin: 0 50px 200px 263px;
+    padding-top: 50px;
+}
+
+.displayResultContentDiv .infoTitleSpan{
+     padding-right: 210px;;
+}
+
+.displayResultContentDiv .resultDataTable{
+    margin-top: 10px;
+}
+
+.displayResultContentDiv .resultDataTable .displayResultSpan{
+    color: #104E8B;
+}
+
+.displayResultContentDiv .resultDataTable td{
+    width:80pt;
+}
+
+.displayResultContentDiv .resultDataTable .unchangedColumn{
+    /* background-color: #a52a2a; */
+    background-color: #FFFFFF;
+}
+
+.displayResultContentDiv .resultDataTable .changedColumn{
+    /* background-color: #5f9ea0; */
+    background-color: #a52a2a;
+}
+
+.filterButton{
+    background: linear-gradient(#418fde, #FCFDFE);
+    cursor: pointer;
+    margin: 20px 15px;
+    width: 80px;
+    font-size: 14px;
+    height: 30px;
+}

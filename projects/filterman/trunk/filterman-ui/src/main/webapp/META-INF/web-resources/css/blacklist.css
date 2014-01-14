@@ -1,0 +1,132 @@
+.blackListColumn1{
+    border: solid 1px;
+    width: 150px;
+    height: 400px;
+    float: left;
+    background: #DDDDDD;
+}
+
+.blackListColumn1 span{
+	font-size: 14px;
+	color: #000000;
+}
+
+.blackListColumn2{
+	border: solid 1px;
+    width: 250px;
+    height: 400px;	
+    margin-left: 80px;
+    float: left;
+    background: #DDDDDD;
+}
+
+.blackListColumn2 span{
+	font-size: 14px;
+	color: #000000;
+}
+
+#blackListKeyId{
+    margin-left: 15px;
+}
+
+#blackListComment{
+	margin-left: 30px;
+}
+
+.blackListKeyId{
+    margin-top: 20px;
+}
+
+.blackListComment{
+    margin-top: 20px;
+}
+
+.blackListAddButton{
+	background: none repeat scroll 0 0 #DBCE8F;
+    border-radius: 5px;
+    height: 25px;
+    width: 80px;
+    margin-top: 318px;
+    cursor: pointer;
+}
+
+.blackListAddButton span{
+    margin-left: 5px;
+}
+
+.blackListColumn3{
+    width: 450px;
+    height: 400px;
+	margin-left: 80px;
+	float: left;
+}
+
+.blackListColumn4{
+	border: solid 1px;
+    width: 250px;
+    height: 400px;
+	margin-left: 80px;
+	float: left;
+	background: #DDDDDD;
+}
+
+.blackListColumn4 span{
+	font-size: 14px;
+	color: #000000;
+}
+
+#whiteListKeyId{
+    margin-left: 15px;
+}
+
+#whiteListComment{
+	margin-left: 30px;
+}
+
+.whiteListKeyId{
+    margin-top: 20px;
+}
+
+.whiteListComment{
+    margin-top: 20px;
+}
+
+.whiteListAddButton{
+	background: none repeat scroll 0 0 #DBCE8F;
+    border-radius: 5px;
+    height: 25px;
+    width: 80px;
+    margin-top: 318px;
+    cursor: pointer;
+}
+
+.whiteListAddButton span{
+    margin-left: 5px;
+}
+
+.blackListColumn5{
+    width: 450px;
+    height: 400px;
+	margin-left: 80px;
+	float: left;
+}
+
+.whiteListDeleteButton{
+	background: none repeat scroll 0 0 #DBCE8F;
+    border-radius: 5px;
+    height: 25px;
+    width: 80px;
+    cursor: pointer;
+}
+
+.blackListColumn5 .whiteListDeleteButton span{
+	font-size: 14px;
+	color: #000000;
+	margin-left: 5px;
+}
+
+.blackListColumn3 .whiteListDeleteButton span{
+	font-size: 14px;
+	color: #000000;
+	margin-left: 5px;
+}

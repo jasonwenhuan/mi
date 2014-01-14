@@ -1,0 +1,45 @@
+.searchField{
+    height: 30px;
+    width: 40%;
+    margin: 0;
+}
+
+.tableField{
+    height: 450px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.fmsearch{
+	height:30px;
+	width: 30%;
+}
+
+.crudField{
+    margin-top: -30px;
+    float: right;	
+}
+
+.intervalField{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.intervalField span{
+    font-size: 14px;
+    color: #000000;
+}
+
+.frequentField{
+	margin-top: 20px;
+    margin-left: 20px;
+}
+
+.frequentField span{
+	font-size: 14px;
+    color: #000000;
+}
+
+.dialog .action{
+    margin-top: 150px;
+}

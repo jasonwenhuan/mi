@@ -1,0 +1,71 @@
+
+.ui-jqgrid .ui-jqgrid-view .ui-jqgrid-hdiv{
+    overflow: visible;
+}
+
+.ui-jqgrid-view table .ui-jqgrid-labels{
+    height: 40px;
+}
+	
+.ui-jqgrid-view table .ui-jqgrid-labels th div{
+	text-align: left;
+    overflow: visible
+}
+
+/*Removing table background color*/
+.ui-state-default, .ui-widget-content .ui-state-default, 
+.ui-widget-header .ui-state-default{
+		background: white !important;
+	}
+
+/*Hiding grids*/
+.ui-jqgrid { 
+	border-right-width: 0px; border-left-width: 0px; border-width: 0px; 
+}
+.ui-jqgrid tr.ui-row-ltr td { 
+	border-bottom-color: transparent; border-right-color: transparent;
+}
+
+/*alternating row colors*/
+.myAltRowClass { 
+	background-color: #DDDDDC; background-image: none; 
+}
+
+.ui-jqgrid tr.jqgrow td {
+	height:30px;
+}
+
+/*Header grid*/
+.ui-state-default, .ui-widget-content .ui-state-default, 
+.ui-widget-header .ui-state-default {
+	border: 0 none;background: none repeat scroll 0 0 #DFEFFC;height:40px;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, 
+.ui-widget-header .ui-state-default {
+	background: none repeat scroll 0 0 #CCCCCC !important;
+}
+
+.ui-jqgrid .ui-jqgrid-view .ui-jqgrid-hbox{
+    padding-right: 0px;
+}
+
+.ui-jqgrid .ui-jqgrid-view{
+    font-size: 14px;
+}
+
+.jqgridBackground{
+    background: #f0f8ff;
+}
+
+.ui-state-default .ui-icon {
+    background-image: url("/filterman-ui/statics/images/ui-icons_222222_256x240.png");
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+    background: none repeat scroll 0 0 #DDDDDD !important;
+}
+
+.ui-widget{
+   font-family: Verdana, "宋体", Arial,Sans; 
+}

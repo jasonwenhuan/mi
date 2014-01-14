@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+    <context:annotation-config />
+
+    <context:property-placeholder location="classpath:filterman-core.properties" ignore-unresolvable="true"/>
+
+    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />
+
+    <bean id="mongoServer" class="com.mongodb.ServerAddress">
+        <constructor-arg value="${mongo.db.server.ip}" type="java.lang.String"/>
+        <constructor-arg value="${mongo.db.server.port}" type="int"/>
+    </bean>
+
+    <!-- <bean id="rep-server1" class="com.mongodb.ServerAddress">
+        <constructor-arg value="${mongo.replica.set.s1}" type="java.lang.String"/>
+        <constructor-arg value="${mongo.replica.set.s1.port}" type="int"/>
+    </bean>
+
+    <bean id="rep-server2" class="com.mongodb.ServerAddress">
+        <constructor-arg value="${mongo.replica.set.s2}" type="java.lang.String"/>
+        <constructor-arg value="${mongo.replica.set.s2.port}" type="int"/>
+    </bean> -->
+
+    <!-- <bean id="readPreference" class="com.mongodb.ReadPreference">
+
+    </bean> -->
+
+    <bean id="mongoOptions" class="com.mongodb.MongoOptions">
+        <property name="connectionsPerHost" value="${mongo.options.connectionsPerHost}" />
+        <property name="threadsAllowedToBlockForConnectionMultiplier" value="${mongo.options.threadsAllowedToBlockForConnectionMultiplier}" />
+        <property name="maxWaitTime" value="${mongo.options.maxWaitTime}" />
+        <property name="connectTimeout" value="${mongo.options.connectTimeout}" />
+        <property name="autoConnectRetry" value="true" />
+        <property name="readPreference">
+            <bean class="com.mongodb.ReadPreference" factory-method="secondaryPreferred"/>
+        </property>
+    </bean>
+
+    <!-- <bean id="rep-mongo" class="com.mongodb.Mongo">
+        <constructor-arg type="java.util.List">
+            <list>
+                <ref bean="rep-server1"/>
+                <ref bean="rep-server2"/>
+            </list>
+        </constructor-arg>
+
+        <constructor-arg ref="mongoOptions"/>
+    </bean> -->
+
+    <bean id="mongo" class="com.mongodb.Mongo">    	
+        <constructor-arg ref="mongoServer" />
+        <constructor-arg ref="mongoOptions" />
+    </bean>
+
+    <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+        <constructor-arg ref="mongo" />
+        <constructor-arg value="${mongo.db.name}" />
+    </bean>
+
+    <bean id="userDao" class="com.chinaunicom.filterman.core.db.dao.UserDao"/>
+    <bean id="userBL" class="com.chinaunicom.filterman.core.bl.impl.UserBL"/>
+
+    <bean id="accountDao" class="com.chinaunicom.filterman.core.db.dao.AccountDao"/>
+    <bean id="accountBL" class="com.chinaunicom.filterman.core.bl.impl.AccountBL"/>
+
+    <bean id="phoneDao" class="com.chinaunicom.filterman.core.db.dao.PhoneDao"/>
+    <bean id="phoneBL" class="com.chinaunicom.filterman.core.bl.impl.PhoneBL"/>
+
+    <bean id="deviceDao" class="com.chinaunicom.filterman.core.db.dao.DeviceDao"/>
+    <bean id="deviceBL" class="com.chinaunicom.filterman.core.bl.impl.DeviceBL"/>
+
+    <bean id="blackListDao" class="com.chinaunicom.filterman.core.db.dao.BlackListDao"/>
+    <bean id="blackListBL" class="com.chinaunicom.filterman.core.bl.impl.BlackListBL"/>
+
+    <bean id="whiteListDao" class="com.chinaunicom.filterman.core.db.dao.WhiteListDao"/>
+    <bean id="whiteListBL" class="com.chinaunicom.filterman.core.bl.impl.WhiteListBL"/>
+
+    <bean id="requestDao" class="com.chinaunicom.filterman.core.db.dao.RequestDao"/>
+    <bean id="requestBL" class="com.chinaunicom.filterman.core.bl.impl.RequestBL"/>
+
+    <bean id="three2Defense" class="com.chinaunicom.filterman.core.bl.impl.Three2Defense"/>
+    <bean id="three1Defense" class="com.chinaunicom.filterman.core.bl.impl.Three1Defense" />
+    <bean id="zonePayDefense" class="com.chinaunicom.filterman.core.bl.impl.ZonePayDefense"/>
+    <bean id="intervalDefense" class="com.chinaunicom.filterman.core.bl.impl.IntervalDefense"/>
+    <bean id="relatedPhoneDefense" class="com.chinaunicom.filterman.core.bl.impl.RelatedPhoneDefense"/>
+    <bean id="suspectedUserDefense" class="com.chinaunicom.filterman.core.bl.impl.SuspectedUserDefense"/>
+    <bean id="blackListDefense" class="com.chinaunicom.filterman.core.bl.impl.BlackListDefense"/>
+    <bean id="whiteListDefense" class="com.chinaunicom.filterman.core.bl.impl.WhiteListDefense"/>
+
+    <bean id="policyBL" class="com.chinaunicom.filterman.core.bl.impl.PolicyBL"/>
+    <bean id="policyDao" class="com.chinaunicom.filterman.core.db.dao.PolicyDao"/>
+
+    <bean id="appBL" class="com.chinaunicom.filterman.core.bl.impl.AppBL"/>
+    <bean id="appDao" class="com.chinaunicom.filterman.core.db.dao.AppDao"/>
+
+    <bean id="groupBL" class="com.chinaunicom.filterman.core.bl.impl.GroupBL"/>
+    <bean id="groupDao" class="com.chinaunicom.filterman.core.db.dao.GroupDao"/>
+
+    <bean id="groupPolicyBL" class="com.chinaunicom.filterman.core.bl.impl.PolicyBL"/>
+    <bean id="groupPolicyDao" class="com.chinaunicom.filterman.core.db.dao.PolicyDao"/>
+
+    <bean id="searchBL" class="com.chinaunicom.filterman.core.bl.impl.SearchBL"/>
+
+    <bean id="orderInfoDao" class="com.chinaunicom.filterman.core.db.dao.OrderInfoDao"/>
+
+    <bean id="hardInfoBL" class="com.chinaunicom.filterman.core.bl.impl.HardInfoBL"/>
+    <bean id="hardInfoDao" class="com.chinaunicom.filterman.core.db.dao.HardInfoDao"/>
+    
+    <bean id="intervalBL" class="com.chinaunicom.filterman.core.bl.impl.IntervalBL"/>
+    <bean id="intervalDao" class="com.chinaunicom.filterman.core.db.dao.IntervalMstDao"/>
+    
+    <bean id="intervalHistoryBL" class="com.chinaunicom.filterman.core.bl.impl.IntervalHistoryBL"/>
+    <bean id="intervalHistoryDao" class="com.chinaunicom.filterman.core.db.dao.IntervalHistoryDao"/>
+    
+    <bean id="blockPhoneBL" class="com.chinaunicom.filterman.core.bl.impl.BlockphoneBL"/>
+    <bean id="blockPhoneDao" class="com.chinaunicom.filterman.core.db.dao.BlockphoneDao"/>
+    
+    <bean id="relatedPhoneBL" class="com.chinaunicom.filterman.core.bl.impl.RelatedPhoneBL"/>
+    <bean id="relatedPhoneDao" class="com.chinaunicom.filterman.core.db.dao.RelatedPhoneDao"/>
+    
+    <bean id="relatedPhoneRuleBL" class="com.chinaunicom.filterman.core.bl.impl.RelatedPhoneRuleBL"/>
+    <bean id="relatedPhoneRuleDao" class="com.chinaunicom.filterman.core.db.dao.RelatedPhoneRuleDao"/>
+
+    <bean id="zoneMapPhoneDao" class="com.chinaunicom.filterman.core.db.dao.ZoneMapPhoneDao"/>
+    <bean id="zonePayDailySumDao" class="com.chinaunicom.filterman.core.db.dao.ZonePayDailySumDao"/>
+    <bean id="zonePayHistoryDao" class="com.chinaunicom.filterman.core.db.dao.ZonePayHistoryDao"/>
+    <bean id="zonePayRuleDao" class="com.chinaunicom.filterman.core.db.dao.ZonePayRuleDao"/>
+    
+    <bean id="badBillBL" class="com.chinaunicom.filterman.core.bl.impl.BadBillBL"/>
+    <bean id="badBillDao" class="com.chinaunicom.filterman.core.db.dao.BadBillDao"/>
+    
+    <bean id="generalBillBL" class="com.chinaunicom.filterman.core.bl.impl.GeneralBillBL"/>
+    <bean id="generalBillDao" class="com.chinaunicom.filterman.core.db.dao.GeneralBillDao"/>
+    
+    <bean id="zoneMapPhoneBL" class="com.chinaunicom.filterman.core.bl.impl.ZonemapphoneBL"/>
+</beans>

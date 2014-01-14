@@ -1,0 +1,228 @@
+header {
+    padding: 0 12px 20px 20px;
+    color: #483723;
+    overflow: hidden;
+}
+
+header address {
+    padding-top: 10px;
+    font-style: normal;
+    float: left;
+}
+
+header address span {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+header .logo {
+    float: right;
+    line-height: 1.2;
+}
+
+header p {
+    text-align: center;
+}
+
+header p a {
+    font-size: 36px;
+    font-family: 'Renaissance';
+    text-decoration: none;
+    color: #483723;
+}
+
+.cont {
+    width: 966px;
+    margin: 35px auto 0;
+    border: 12px solid rgba(255, 255, 255, .5);
+    padding-bottom: 20px;
+}
+
+h1 {
+    font-size: 100px;
+    text-shadow: 3px 4px 0 #000000;
+    font-family: "Palace Script MT";
+    background-color: rgba(255, 255, 255, .5);
+}
+
+h2 {
+    font-size: 18px;
+    text-shadow: 3px 4px 0 #000;
+    font-style: italic;
+    float: right;
+    margin-right: 60px;
+    margin-top: 20px;
+}
+
+.cont>p {
+    font-family: 'Renaissance';
+    font-size: 22px;
+    float: left;
+    margin-left: 60px;
+    margin-top: 20px;
+}
+
+.login {
+    margin: 40px 60px 0 0;
+    padding: 20px 40px;
+    background-color: #000407;
+    float: right;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    border: 4px solid rgba(85, 40, 40, .8);
+    position: relative;
+}
+
+.login fieldset legend {
+    font-size: 24px;
+    font-weight: 700;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #464648;
+    width: 100%;
+}
+
+.login fieldset label {
+    display: block;
+    padding: 20px 0 10px;
+}
+
+.login fieldset input[type="text"], .login fieldset input[type="password"] {
+    padding: 0 10px;
+    height: 36px;
+    line-height: 36px;
+    width: 300px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    box-shadow: -1px 3px 3px #CACACA inset, 0 -1px 0 #EEEEEE;
+}
+
+.login fieldset .creat, .login fieldset .forgot {
+    position: absolute;
+    right: 50px;
+    font-size: 10px;
+}
+
+.login fieldset .creat {
+    top: 110px;
+}
+
+.login fieldset .forgot {
+    top: 200px;
+}
+
+.login fieldset .anony {
+    margin-top: 5px;
+    top: 35px;
+}
+
+.login fieldset input[type="submit"] {
+    width: 100px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    font-weight: 700;
+    color: #000;
+    margin: 20px auto 0;
+    display: block;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f2f3), to(#d4d4d4));
+    background-image: -webkit-linear-gradient(top, #f5f2f3, #d4d4d4);
+    background-image: -moz-linear-gradient(top, #f5f2f3, #d4d4d4);
+    background-image: -ms-linear-gradient(top, #f5f2f3, #d4d4d4);
+    background-image: -o-linear-gradient(top, #f5f2f3, #d4d4d4);
+    background-image: linear-gradient(top, #f5f2f3, #d4d4d4);
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -o-border-radius: 25px;
+    border-radius: 25px;
+    border: none;
+}
+
+.error-message {
+    color: red;
+    font-size: larger;
+}
+
+.title {
+    font-size: 25px;
+    font-weight: bold;
+    font-family: \4EFF\5B8B;
+    text-align: center;
+    width: 450px;
+}
+
+.spanStyle {
+    font-size: 16px
+}
+
+.field {
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    height: 23px;
+    line-height: 26px;
+    margin-bottom: 15px;
+    padding: 0 5px;
+    width: 150px;
+}
+
+.tableStyle {
+    /*background-image: linear-gradient(#EEF5FC, #FCFDFE);*/
+    height: 170px;
+    width: 316px;
+    font-family: \5B8B\4F53;
+    border-radius: 17px 17px 17px 17px;
+}
+
+.filtermanButton {
+    color: #000000;
+    height: 22px;
+    margin: 0;
+    padding: 2px 6px 0 8px;
+    text-decoration: none;
+    background: linear-gradient(#418fde, #FCFDFE);
+    cursor: pointer;
+}
+
+.banner {
+    background: url("../images/logo.gif") no-repeat scroll 2px 50px transparent;
+    float: left;
+    height: 300px;
+
+    width: 200px;
+}
+
+.filtermanLoginDiv {
+    padding-top: 5%;
+    margin-left: 30%;
+    /*background: white;*/
+}
+
+.loginTopDiv {
+    height: 15%;
+}
+
+.loginAreaDiv {
+    background-color: #FFFFFF;
+    height: 500px;
+    margin-top: 5%;
+    width: 100%;
+}
+
+.validateLoginMsg{
+    color: red;
+    font-size: 0.85em;
+    display: none;
+}
+
+#errorMsg{
+    margin-left:55px;
+    display: inline-table;
+}
+
+.bodystyle{
+    margin: 0px;
+    background-color: #418fde
+}

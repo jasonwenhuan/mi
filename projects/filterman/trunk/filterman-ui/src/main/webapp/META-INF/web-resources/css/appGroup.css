@@ -1,0 +1,209 @@
+@CHARSET "UTF-8";
+
+.appGroupList{
+    width: 150px;
+    height: 350px;
+}
+
+.addAppGroup{
+    margin: 10px 20px 10px 0px;
+}
+
+.addAppGroup input{
+    width: 60px;
+}
+
+.addButton{
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background: #DBCE8F;
+    border-radius: 5px;
+    color: #130C0E;
+}
+
+.groupColumn1{
+     float: left;
+     width: 200px;
+}
+
+.appGroupResult{
+}
+
+.groupColumn2{
+	margin-top: 15px;
+    width: 340px;
+    height: 380px;
+    float: left;
+}
+
+.groupColumn3{
+	margin-top: 15px;
+    margin-left: 20px;
+    width: 340px;
+    height: 380px;
+    float: left;
+}
+
+.groupColumn4{
+   width: 50px;
+   height: 300px;
+   margin-left: -60px;
+   float: left;
+}
+
+.tableTitle{
+    width: 340px;
+    height: 30px;
+}
+
+.groupColumn2 .tableTitle span{
+    font-size: 16px;
+    color: #000000;
+}
+
+.searchField{
+    margin: 5px 10px 5px 0px;
+    float: left;
+}
+
+.searchButton{
+    display: block;
+    float: left;
+    width: 50px;
+    height: 25px;
+    background: #DBCE8F;
+    border-radius: 5px;
+}
+	
+.searchButton span{
+	height: 25px;
+    font-size: 15px;
+    color: #000000;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+
+.searchButton a{
+	width: 50px;
+	height: 25px;
+	border-radius: 5px;
+	float: left;
+}
+
+
+.searchButton a:hover{
+   background-color: #DDDDDD;
+}
+
+.resetButton{
+    display: block;
+    float: left;
+    width: 50px;
+    height: 25px;
+    background: #DBCE8F;
+    border-radius: 5px;
+    
+    margin-left: 20px;
+}
+
+.resetButton a{
+	width: 50px;
+	border-radius: 5px;
+	float: left;
+}
+
+.resetButton a:hover{
+   background-color: #DDDDDD;
+}
+	
+.resetButton span{
+	height: 25px;
+	float: left;
+	cursor: pointer;
+	color: #000000;
+	font-size: 15px;
+	margin-left: 10px;
+}
+
+.addAppGroupBtn{
+    width: 50px;
+    height: 25px;
+    background: #DBCE8F;
+    border-radius: 5px;
+    margin-top: 80px;
+}
+
+.addAppGroupBtn a{
+	width: 50px;
+	border-radius: 5px;
+	float: left;
+}
+
+.addAppGroupBtn a:hover{
+    background-color: #DDDDDD;
+}
+
+.addAppGroupBtn span{
+	height: 25px;
+	float: left;
+	cursor: pointer;
+	color: #000000;
+	font-size: 15px;
+	margin-left: 10px;
+}
+
+.deleteAppGroupBtn{
+    width: 50px;
+    height: 25px;
+    background: #DBCE8F;
+    border-radius: 5px;
+    margin-right: 20px;
+    margin-top: 80px;
+}
+
+.deleteAppGroupBtn a{
+	width: 50px;
+	border-radius: 5px;
+	float: left;
+}
+
+.deleteAppGroupBtn a:hover{
+    background-color: #DDDDDD;
+}
+
+.deleteAppGroupBtn span{
+	height: 25px;
+	float: left;
+	cursor: pointer;
+	color: #000000;
+	font-size: 15px;
+	margin-left: 10px;
+}
+
+
+.appSearchField{
+    height: 30px;
+    width: 340px;
+}
+
+table thead{
+	background: #DBE9FF;
+}
+
+.addAndRemoveAppColumn{
+    width: 50px;
+    height: 100px;
+    float: left;
+    margin-left: 60px;
+    margin-top: 150px;
+}
+
+.removeAppButton{
+    margin-top: 40px;
+}
+
+.groupList{
+   margin-top: 10px;
+}

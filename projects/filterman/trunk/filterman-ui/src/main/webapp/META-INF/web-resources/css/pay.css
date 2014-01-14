@@ -1,0 +1,154 @@
+section{
+    position: relative;
+}
+.search{
+    border-radius: 5px;
+    border:1px solid #dbe9ff;
+    font-size: 16px;
+    color: #000;
+}
+
+.search h2{
+    border-radius: 5px 5px 0 0;
+    background:#dbe9ff;
+    font-size: 18px;
+    height: 35px;
+    line-height: 35px;
+}
+.search h2 i{
+    display: inline-block;
+    width: 16px;
+    height: 14px;
+    background: url(../images/buttons.png) no-repeat scroll -85px -141px;
+    margin: 0 8px 0 25px;
+}
+.search .search-form{
+    padding: 0 25px;
+    height: 150px;
+}
+.search .search-form .search-item{
+    float: left;
+}
+.search .search-form .search-item p{
+    margin-top: 22px;
+}
+.search .search-form .search-item p label{
+    padding-right: 10px;
+}
+.search .search-form .search-item p input[type="text"]{
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid #000;
+    margin-right: 10px;
+    padding: 5px 0;
+}
+.search .search-form .search-item p input[type="text"]:focus{
+    background: #f1f1f2;
+}
+.search .search-form .search-item p select{
+    padding: 2px 1px;
+    width: 150px;
+}
+.search .search-form .search-button{
+    float: right;
+}
+.search .search-form .search-button input{
+    width: 150px;
+    height: 80px;
+    background: url(../images/search-button.png) no-repeat scroll 0 0;
+    border: 0;
+    margin-top: 30px;
+}
+.result{
+    /* margin-top: 20px; */
+}
+.result table,.dialog table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.result table tr,.dialog table tr{
+    vertical-align: middle;
+    text-align: center;
+}
+.result table tr th,.result table tr td,.dialog table tr th,.dialog table tr td{
+    padding: 5px;
+}
+.result table tr th,.dialog table tr th{
+    font-size: 16px;
+    color: #000;
+    border-bottom: 1px solid #999c9f;
+}
+.result table tr td,.dialog table tr td{
+}
+.result table tr.odd td,.dialog table tr.odd td{
+    background: #f1f6ff;
+}
+.result table .modify{
+    display: inline-block;
+    width: 69px;
+    height: 25px;
+    line-height: 99em;
+    overflow: hidden;
+    background: url(../images/buttons.png) no-repeat scroll 0 -136px;
+    cursor:pointer;
+}
+.paging{
+    font-size: 16px;
+    color: #000;
+}
+.action{
+    text-align: right;
+    margin-top: -100px;
+}
+.action a{
+    width: 101px;
+    height: 34px;
+    text-indent: -999em;
+    margin: 0 10px;
+    background: url(../images/buttons.png) no-repeat scroll 0 0;
+    display: inline-block;
+    line-height: 99em;
+    overflow: hidden;
+    cursor: pointer;
+}
+.action .view{
+    background-position: 0 -68px;
+}
+.action .reset{
+    background-position: 0 -102px;
+    margin-top: 200px;
+}
+.dialog{
+    position: absolute;
+    top:50%;
+    left:50%;
+    border:3px solid #575656;
+    border-radius: 5px;
+    padding: 20px 22px;
+    background: #fff;
+    z-index: 9;
+    width: 680px;
+    margin-left: -340px;
+    display: none;
+    box-shadow: 0 0 3px #669efb;
+    height: 300px;
+}
+.dialog .close{
+    width: 42px;
+    height: 42px;
+    background: url(../images/buttons.png) no-repeat scroll 0 -161px;
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    cursor: pointer;
+}
+.dialog table .high-light{
+    color: #eb6100;
+}
+.dialog .action{
+    margin-top: 240px;
+}
+.dialog .action .modify{
+    background-position: 0 -34px;
+}
